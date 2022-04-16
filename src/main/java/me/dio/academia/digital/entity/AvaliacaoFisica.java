@@ -3,6 +3,7 @@ package me.dio.academia.digital.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import me.dio.academia.digital.entity.form.AvaliacaoFisicaForm;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -29,5 +30,4 @@ public class AvaliacaoFisica {
 
   @Column(name = "altura_atual")
   private double altura;
-
 }

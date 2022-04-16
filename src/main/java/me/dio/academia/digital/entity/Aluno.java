@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import me.dio.academia.digital.entity.form.AlunoForm;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -36,4 +37,10 @@ public class Aluno {
   @JsonIgnore
   private List<AvaliacaoFisica> avaliacoes = new ArrayList<>();
 
+  public Aluno(AlunoForm form) {
+    this.nome = form.getNome();
+    this.cpf = form.getCpf();
+    this.bairro = form.getBairro();
+    this.dataDeNascimento = form.getDataDeNascimento();
+  }
 }
